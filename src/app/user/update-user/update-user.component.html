@@ -1,0 +1,36 @@
+<div class="container">
+    <form [formGroup]="updateUserForm" (ngSubmit)="onFormSubmit(updateUserForm.value)">
+  
+      <h2>Update User</h2>
+
+      <div class="form-group">
+        <label for="id">Id: </label>
+        <input type="text" class="form-control" id="id" formControlName="Id" />
+      </div>
+
+        <div class="form-group">
+          <label for="username">Username: </label>
+          <input type="text" class="form-control" id="username" formControlName="UserName" />
+        </div>
+  
+        <div class="form-group">
+          <label for="name">Name: </label>
+          <input type="text" class="form-control" id="name" formControlName="Name" />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email: </label>
+          <input type="text" class="form-control" id="email" formControlName="Email" />
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password: </label>
+          <input type="text" class="form-control" id="password" formControlName="Password" />
+        </div>
+  
+      <button type="submit" class="btn btn-primary">Update User</button>
+      <hr>
+      <label>{{massage}}</label>
+    </form>
+  
+  </div>

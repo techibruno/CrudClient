@@ -1,0 +1,26 @@
+<div class="container">
+
+  <button type="button" class="btn btn-primary" style="margin:10px 0 10px 0" (click)="addUser()">Add User</button>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Username</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let user of userList">
+        <td>{{user.UserName}}</td>
+        <td>{{user.Name}}</td>
+        <td>{{user.Email}}</td>
+        <td>
+          <button class="btn btn-success" type="button" style="margin-right:5px;" (click)="updateUser(user)">Update</button>
+          <button class="btn btn-danger" type="button" (click)="deleteUser()">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

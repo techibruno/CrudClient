@@ -1,0 +1,32 @@
+<div class="container">
+  <form [formGroup]="createUserForm" (ngSubmit)="onFormSubmit(createUserForm.value)">
+
+    <h2>Form</h2>
+
+      <div class="form-group">
+        <label for="username">Username: </label>
+        <input type="text" class="form-control" id="username" formControlName="username" />
+      </div>
+
+      <div class="form-group">
+        <label for="name">Name: </label>
+        <input type="text" class="form-control" id="name" formControlName="name" />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email: </label>
+        <input type="text" class="form-control" id="email" formControlName="email" />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password: </label>
+        <input type="text" class="form-control" id="password" formControlName="password" />
+      </div>
+
+    <button type="submit" class="btn btn-primary">Create User</button>
+
+    <hr>
+    <label>{{massage}}</label>
+  </form>
+
+</div>
